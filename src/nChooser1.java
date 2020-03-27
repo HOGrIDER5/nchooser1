@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 3/25/2020
+ * Amer Stas
+ * This program calculates the number of ways to choose different objects from a set of objects  
  */
 
 /**
@@ -137,20 +137,26 @@ public class nChooser1 extends javax.swing.JFrame {
     }//GEN-LAST:event_input1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    // Variables that are needed
     int r;
     int n;
     int sub;
     int answer;
+    // Getting the variables 
     r = Integer.parseInt(input.getText());
     n = Integer.parseInt(input1.getText());
+    // method to find the substraction
     sub = n-r;
+    // method to find the answer
     answer =  fact(n)/(fact2(r)*fact3(sub));
+    //printing the answer on the screen
     output.setText("There are"+ answer +"ways");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    // importing the factorial method
     static public int fact(int a){
         if (a==0||a==1){
             return 1;
